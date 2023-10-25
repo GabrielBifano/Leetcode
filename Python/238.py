@@ -1,7 +1,7 @@
 # Product of Array Except Self
 # Medium
 
-def productExceptSelf(nums: list[int]) -> list[int]:
+def productExceptSelf(nums: 'list[int]') -> 'list[int]':
     
     cumulative_prefix = 1
     cumulative_suffix  = 1
