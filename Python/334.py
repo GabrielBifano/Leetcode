@@ -2,7 +2,7 @@
 # Medium
 
 class Solution:
-    def increasingTriplet(self, nums: List[int]) -> bool:
+    def increasingTriplet(self, nums: 'list[int]') -> bool:
         f = s = 2147483648
         for i in nums:
             if i > s:
