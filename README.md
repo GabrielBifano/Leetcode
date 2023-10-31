@@ -11,12 +11,12 @@ are sinalized with a " - " between its problem code number, and the implementati
 **example:**
 - 📂 Python:
    - 🐍 11.py
-	* 🐍 11-2.py
-	* 🐍 1769.py
-	* ...
-* 📁 C++:
-	* 🧮 11.cpp
-	* ...
+	- 🐍 11-2.py
+	- 🐍 1769.py
+	- ...
+- 📁 C++:
+	- 🧮 11.cpp
+	- ...
 
 Inside each file there is a title with the problem's name, and a subtitle with it's difficulty
 
