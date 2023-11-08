@@ -1,3 +1,6 @@
+# Reverse Linked List
+# Easy
+
 from typing import Optional
 
 class ListNode:
