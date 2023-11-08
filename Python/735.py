@@ -1,3 +1,6 @@
+# Asteroid Collision
+# Medium
+
 from collections import deque
 
 def asteroidCollision(asteroids: 'list[int]') -> 'list[int]':
