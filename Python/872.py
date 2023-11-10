@@ -1,5 +1,5 @@
 # Leaf-Similar Trees
-# 
+# Easy
 
 from collections import Optional
 
