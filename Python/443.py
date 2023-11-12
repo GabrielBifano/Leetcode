@@ -1,3 +1,6 @@
+# String Compression
+# Medium
+
 def compress(chars: 'list[str]') -> int:
 
         sentence = "".join(chars)
