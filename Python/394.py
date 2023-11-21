@@ -1,3 +1,6 @@
+# Decode String
+# Medium
+
 def decodeString(s: str) -> str:
 
     def get_nums(s):
