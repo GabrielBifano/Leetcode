@@ -17,13 +17,13 @@ defmodule Solution do
     |> maxsum(0)
   end
 
-  defp halve_it(midpoint, nil, stack), do: {midpoint, stack}
-  defp halve_it(midpoint, endpoint, stack) do
-    halve_it(midpoint.next, endpoint.next.next, [midpoint.val | stack])
+  defp halve_it(mid, nil, stack), do: {mid, stack}
+  defp halve_it(mid, endpoint, stack) do
+    halve_it(mid.next, endpoint.next.next, [mid.val | stack])
   end
 
-  defp maxsum({midpoint, [x | stack]}, csum) do
-    maxsum({midpoint.next, stack}, max(csum, midpoint.val + x))
+  defp maxsum({mid, [x | stack]}, csum) do
+    maxsum({mid.next, stack}, max(csum, mid.val + x))
   end
   defp maxsum(_, csum), do: csum
 end
