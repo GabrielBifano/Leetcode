@@ -1,4 +1,5 @@
 # Number of Provinces
+# Medium
 
 class Solution:        
 
