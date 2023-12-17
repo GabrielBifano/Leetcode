@@ -1,8 +1,6 @@
 # Delete Node in a BST
 # Medium
 
-# This still doesnt work
-
 from typing import Optional
 
 class TreeNode:
