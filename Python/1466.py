@@ -1,6 +1,8 @@
 # Reorder Routes to Make All Paths Lead to the City Zero
 # Medium
 
+# This algorithm works, but exceeds time
+
 class Solution:
     def minReorder(self, n: int, connections: 'list[list[int]]') -> int:
         
