@@ -1,6 +1,6 @@
 # Nearest Exit from Entrance in Maze
 # Medium
-# 678 ms => Faster than 100% on 21/12/2023
+# 678 ms => Faster than 100% on 21/12/2023 (very ugly, I know)
 
 from collections import deque
 
