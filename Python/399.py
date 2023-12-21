@@ -1,9 +1,11 @@
 # Evaluate Division
 # Medium
 
+from collections import defaultdict
+
 class Solution:
-    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
-        adj = collections.defaultdict(list)
+    def calcEquation(self, equations: 'list[list[str]]', values: 'list[float]', queries: 'list[list[str]]') -> 'list[float]':
+        adj = defaultdict(list)
         for eq, val in zip(equations, values):
             s1, s2 = eq
             adj[s1].append((s2, val))
