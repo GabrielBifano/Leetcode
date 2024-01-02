@@ -1,3 +1,6 @@
+# Rotting Oranges
+# Medium
+
 from collections import deque
 
 class Solution:
