@@ -1,3 +1,5 @@
+# Doesnt work. I will correct it futurely
+
 defmodule TreeNode do
   @type t :: %__MODULE__{
     val: integer,
@@ -10,16 +12,35 @@ end
 defmodule Solution do
   @spec delete_node(root :: TreeNode.t | nil, key :: integer) :: TreeNode.t | nil
   def delete_node(root, key) do
-
+    get_node(root, key)
+    |> del_node(key)
+    root
   end
 
-  defp dfs(nil, _) do: nil
-  defp dfs(node, key) do
-    if node.val < key do
-      dfs(node.left,  key)
-    else
-      dfs(node.right, key)
+  defp get_node(node, key) do
+    cond do
+      nil == node -> nil
+      key == node.val -> node
+      key <  node.val -> get_node(node.left,  key)
+      key >  node.val -> get_node(node.right, key)
     end
-    # dfs(node.left), node.val < key | dfs(node.right), node.val > key
   end
+
+  defp del_node(nil, _), do: nil
+  defp del_node(node, key) do
+    case {node.left, node.right} do
+      {nil,   nil}  -> node = nil
+      {left,  nil}  -> node = node.left
+      {nil, right}  -> node = node.right
+      {left, right} -> node = swap_for_successor(node)
+    end
+  end
+
+  defp swap_for_successor(node) do
+    succ = successor(node, node.right)
+    node = %{node | right: succ.right}
+  end
+
+  defp successor(node, nil),  do: node
+  defp successor(node, left), do: successor(node.left, left.left)
 end
