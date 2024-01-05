@@ -9,8 +9,8 @@ defmodule Solution do
     count(n, 2, 1, 1)
   end
 
-  defp count(c, dp1, _, _ ) when c < 3, do: dp1
-  defp count(c, dp1, dp2, dp3) do
-    count(c - 1, rem(dp1 * 2 + dp3, 1_000_000_007), dp1, dp2)
+  defp count(c, a3, _, _ ) when c < 3, do: a3
+  defp count(c, a3, a2, a1) do
+    count(c - 1, rem(a3 * 2 + a1, 1_000_000_007), a3, a2)
   end
 end
