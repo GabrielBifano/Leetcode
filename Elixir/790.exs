@@ -3,10 +3,13 @@
 
 defmodule Solution do
   @spec num_tilings(n :: integer) :: integer
-  def num_tilings(n) when n == 2, do: 2
-  def num_tilings(n) when n < 2, do: 1
   def num_tilings(n) do
-    count(n, 2, 1, 1)
+    case n do
+      0 -> 0
+      1 -> 1
+      2 -> 2
+      _ -> count(n, 2, 1, 1)
+    end
   end
 
   defp count(c, a3, _, _ ) when c < 3, do: a3
